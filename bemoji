@@ -202,16 +202,16 @@ case "$exit_value" in
     ;;
 0)
     if [ "$bm_default_cmd" = "_echo" ]; then
-        echo "$result"
+        echo -n "$result"
         exit
     fi
-    echo "$result" | "$bm_default_cmd"
+    echo -n "$result" | "$bm_default_cmd"
     ;;
 10)
-    echo "$result" | _clipResult
+    echo -n "$result" | _clipResult
     ;;
 11)
-    echo "$result" | _typeResult
+    echo -n "$result" | _typeResult
     ;;
 esac
 exit
